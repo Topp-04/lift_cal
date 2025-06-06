@@ -4,8 +4,7 @@ def calculate_lift(rho, velocity, wing_area, lift_coefficient):
     L = 0.5 * rho * V^2 * S * CL
     """
     return 0.5 * rho * velocity ** 2 * wing_area * lift_coefficient
-
-# Step 1: Initial Inputs 
+ 
 print("Constant Input")
 try:
     lift_coefficient = float(input("Enter the Lift Coefficient (C_L): "))
@@ -13,8 +12,7 @@ try:
 except ValueError:
     print("Invalid input. Please enter numeric values.")
     exit()
-
-# Step 2: Additional Inputs 
+ 
 print("\nVariable Input")
 try:
     velocity = float(input("Enter the Velocity (m/s): "))
@@ -24,6 +22,6 @@ except ValueError:
     print("Invalid input. Please enter numeric values.")
     exit()
 
-# Calculation 
+
 lift_force = calculate_lift(rho, velocity, wing_area, lift_coefficient)
 print(f"\n✈️ Calculated Lift Force: {lift_force:.2f} Newtons")
